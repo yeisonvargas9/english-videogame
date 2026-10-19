@@ -3,7 +3,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function rnd(n){const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]%n}
 function shuf(a){for(let i=a.length-1;i>0;i--){const j=rnd(i+1);[a[i],a[j]]=[a[j],a[i]]}return a}
 const pct=x=>(x*100).toFixed(1)+'%',F='⚀⚁⚂⚃⚄⚅',SY=['🍒','🍋','🔔','⭐','💎','🍀'],MAX=25;
-const NAMES=['Yeison','Yojhan','Felipe','Karen','Leonel','Anaya','Camila','Frayden','Raymond','Julian','Stiven','Marlon','Jose','Andres','Sofia','Natalia','Santiago','Sebastian','Camilo','Deyvid','Esteban','Manuel','Dilan','Nicole','Mario'];
+const NAMES=['Yeison','Yojhan','Felipe','Karen','Leonel','Anaya','Camila','Frayden','Raymond','Julian','Stiven','Marlon','José','Mauricio','Sofia','Nathalia','Santiago','Sebastian','Camilo','Deyvid','Esteban','Manuel','Dilan','Nicole','Mario'];
 const PAL=['#0f4c81','#1d6fa8','#2b8bc6','#17405f','#3b7ea1'];
 const TIP={
  dice:"Best-of-two dice shifts the odds a lot, but it never guarantees a win. Probability changes chances, not certainty.",

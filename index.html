@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fortune Arena 2 – Probability Game</title>
-<link rel="stylesheet" href="style.css"></head>
+<title>Fortune Arena – Verbs of Opinion &amp; Certainty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><canvas id="fx"></canvas>
+<canvas id="fx"></canvas>
 <div class="wrap">
-<h1>🎰 Fortune Arena</h1>
-<p class="sub">Spin the wheel, face your fate, and discover the real math behind luck.</p>
+  <header class="top">
+    <div class="brand"><i></i> Fortune Arena</div>
+    <div class="chip">Topic: Verbs of Opinion &amp; Certainty</div>
+  </header>
 
-<div id="setup" class="card">
-  <h2>1. Enter the players (up to 24, one name per line)</h2>
-  <textarea id="names" placeholder="Anna&#10;Carlos&#10;Maria&#10;..."></textarea>
-  <div class="row" style="margin-top:10px">
-    <button id="go">Start game</button><button class="alt" id="demo">Fill 24 sample names</button>
-    <span id="count" class="sub" style="margin:0"></span>
-  </div>
-</div>
-
-<div id="game" hidden>
-  <div class="grid">
-    <div class="card">
-      <h2>2. Spin the wheel</h2>
-      <div class="wbox"><div class="ptr" id="ptr"></div><canvas id="wheel" width="420" height="420"></canvas></div>
-      <div class="row" style="justify-content:center;margin-top:12px">
-        <button id="spin">SPIN!</button>
-        <label><input type="checkbox" id="norep" checked> Once per cycle</label>
-        <label><input type="checkbox" id="snd" checked> 🔊</label>
-      </div>
+  <section id="setup" class="card">
+    <h2>1. Players</h2>
+    <p class="sub">Up to 25 names, one per line. The class list is loaded by default; edit it freely.</p>
+    <textarea id="names" placeholder="Anna&#10;Carlos&#10;Maria&#10;..."></textarea>
+    <div class="row" style="margin-top:14px">
+      <button id="go">Start game</button>
+      <button class="alt" id="demo">Fill with the 25 class names</button>
+      <span id="count" class="sub" style="margin:0"></span>
     </div>
-    <div class="card" id="stage"><h2>3. Challenge</h2><p class="sub">Spin the wheel to choose who plays.</p></div>
-  </div>
-  <div class="card">
-    <h2>🏆 Scoreboard</h2>
-    <div class="prog"><i id="pg"></i></div><small class="sub" id="pt"></small>
-    <div class="scroll"><table class="board" id="board"></table></div>
-    <div class="row" style="margin-top:10px"><button class="alt" id="reset">Change players</button></div>
-  </div>
-</div>
-</div>
+  </section>
 
-<script src="script.js"></script></body></html>
+  <main id="game" hidden>
+    <div class="grid">
+      <section class="card">
+        <h2>2. Spin the wheel</h2>
+        <p class="sub">The wheel picks who plays. Fate decides the challenge.</p>
+        <div class="wbox"><div class="ptr" id="ptr"></div><canvas id="wheel" width="420" height="420"></canvas></div>
+        <div class="row" style="justify-content:center;margin-top:18px">
+          <button id="spin">SPIN</button>
+          <label><input type="checkbox" id="norep" checked> Once per cycle</label>
+          <label><input type="checkbox" id="snd" checked> Sound</label>
+        </div>
+      </section>
+      <section class="card" id="stage"></section>
+    </div>
+    <section class="card">
+      <h2>Scoreboard</h2>
+      <div class="prog"><i id="pg"></i></div><small class="sub" id="pt"></small>
+      <div class="scroll"><table class="board" id="board"></table></div>
+      <div class="row" style="margin-top:12px"><button class="alt" id="reset">Change players</button></div>
+    </section>
+  </main>
+</div>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body></html>
